@@ -284,6 +284,37 @@ importers:
         specifier: ^11.1.0
         version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
+  packages/instrumentation-google-genai:
+    dependencies:
+      '@google/genai':
+        specifier: ^1.28.0
+        version: 1.28.0
+      '@opentelemetry/api':
+        specifier: ^1.9.0
+        version: 1.9.0
+      '@opentelemetry/instrumentation':
+        specifier: ^0.203.0
+        version: 0.203.0(@opentelemetry/api@1.9.0)(supports-color@10.0.0)
+      '@traceloop/ai-semantic-conventions':
+        specifier: workspace:*
+        version: link:../ai-semantic-conventions
+      tslib:
+        specifier: ^2.8.1
+        version: 2.8.1
+    devDependencies:
+      '@opentelemetry/context-async-hooks':
+        specifier: ^2.0.1
+        version: 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base':
+        specifier: ^2.0.1
+        version: 2.0.1(@opentelemetry/api@1.9.0)
+      '@types/mocha':
+        specifier: ^10.0.10
+        version: 10.0.10
+      ts-mocha:
+        specifier: ^11.1.0
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+
   packages/instrumentation-langchain:
     dependencies:
       '@langchain/core':
@@ -310,7 +341,7 @@ importers:
     devDependencies:
       '@langchain/community':
         specifier: ^0.3.50
-        version: 0.3.51(8374653941887ab69b3c1e069ad831a4)
+        version: 0.3.51(1de6a7a61d53a6aebe1c60ef0e246014)
       '@langchain/openai':
         specifier: ^0.6.2
         version: 0.6.2(@langchain/core@0.3.71(@opentelemetry/api@1.9.0)(@opentelemetry/exporter-trace-otlp-proto@0.203.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(openai@5.12.2(ws@8.18.3)(zod@3.25.76)))(ws@8.18.3)
@@ -688,7 +719,7 @@ importers:
         version: 0.1.13(@langchain/core@0.3.71(@opentelemetry/api@1.9.0)(@opentelemetry/exporter-trace-otlp-proto@0.203.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(openai@5.12.2(ws@8.18.3)(zod@3.25.76)))
       '@langchain/community':
         specifier: ^0.3.50
-        version: 0.3.51(8374653941887ab69b3c1e069ad831a4)
+        version: 0.3.51(1de6a7a61d53a6aebe1c60ef0e246014)
       '@langchain/core':
         specifier: ^0.3.70
         version: 0.3.71(@opentelemetry/api@1.9.0)(@opentelemetry/exporter-trace-otlp-proto@0.203.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(openai@5.12.2(ws@8.18.3)(zod@3.25.76))
@@ -2089,6 +2120,15 @@ packages:
   '@google-cloud/vertexai@1.10.0':
     resolution: {integrity: sha512-HqYqoivNtkq59po8m7KI0n+lWKdz4kabENncYQXZCX/hBWJfXtKAfR/2nUQsP+TwSfHKoA7zDL2RrJYIv/j3VQ==}
     engines: {node: '>=18.0.0'}
+
+  '@google/genai@1.28.0':
+    resolution: {integrity: sha512-0pfZ1EWQsM9kINsL+mFKJvpzM6NRHS9t360S1MzKq4JtIwTj/RbsPpC/K5wpKiPy9PC+J+bsz/9gvaL51++KrA==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@modelcontextprotocol/sdk': ^1.20.1
+    peerDependenciesMeta:
+      '@modelcontextprotocol/sdk':
+        optional: true
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
@@ -5382,8 +5422,8 @@ packages:
     resolution: {integrity: sha512-a4tiq7E0/5fTjxPAaH4jpjkSv/uCaU2p5KC6HVGrvl0cDjA8iBZv4vv1gyzlmK0ZUKqwpOyQMKzZQe3lTit77A==}
     engines: {node: '>=14'}
 
-  gcp-metadata@7.0.1:
-    resolution: {integrity: sha512-UcO3kefx6dCcZkgcTGgVOTFb7b1LlQ02hY1omMjjrrBzkajRMCFgYOjs7J71WqnuG1k2b+9ppGL7FsOfhZMQKQ==}
+  gcp-metadata@8.1.1:
+    resolution: {integrity: sha512-dTCcAe9fRQf06ELwel6lWWFrEbstwjUBYEhr5VRGoC+iPDZQucHppCowaIp8b8v92tU1G4X4H3b/Y6zXZxkMsQ==}
     engines: {node: '>=18'}
 
   gensync@1.0.0-beta.2:
@@ -5495,8 +5535,8 @@ packages:
     resolution: {integrity: sha512-bqWEnJ1Nt3neqx2q5SFfGS8r/ahumIakg3HcwtNlrVlwXIeNumWn/c7Pn/wKzGhf6SaW6H6uWXLqC30STCMchQ==}
     engines: {node: '>=18'}
 
-  google-auth-library@10.1.0:
-    resolution: {integrity: sha512-GspVjZj1RbyRWpQ9FbAXMKjFGzZwDKnUHi66JJ+tcjcu5/xYAP1pdlWotCuIkMwjfVsxxDvsGZXGLzRt72D0sQ==}
+  google-auth-library@10.4.2:
+    resolution: {integrity: sha512-EKiQasw6aEdxSovPEf1oBxCEvxjFamZ6MPaVOSPXZMnqKFLo+rrYjHyjKlFfZcXiKi9qAH6cutr5WRqqa1jKhg==}
     engines: {node: '>=18'}
 
   google-auth-library@7.14.1:
@@ -10000,6 +10040,15 @@ snapshots:
       - encoding
       - supports-color
 
+  '@google/genai@1.28.0':
+    dependencies:
+      google-auth-library: 10.4.2(supports-color@10.0.0)
+      ws: 8.18.3
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
   '@graphql-typed-document-node/core@3.2.0(graphql@16.11.0)':
     dependencies:
       graphql: 16.11.0
@@ -10316,7 +10365,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@langchain/community@0.3.51(8374653941887ab69b3c1e069ad831a4)':
+  '@langchain/community@0.3.51(1de6a7a61d53a6aebe1c60ef0e246014)':
     dependencies:
       '@browserbasehq/stagehand': 1.14.0(@playwright/test@1.54.1)(deepmerge@4.3.1)(dotenv@17.2.1)(encoding@0.1.13)(openai@5.12.2(ws@8.18.3)(zod@3.25.76))(zod@3.25.76)
       '@ibm-cloud/watsonx-ai': 1.6.8
@@ -10347,7 +10396,7 @@ snapshots:
       chromadb: 3.0.9
       cohere-ai: 7.17.1(encoding@0.1.13)
       fast-xml-parser: 5.2.5
-      google-auth-library: 10.1.0(supports-color@10.0.0)
+      google-auth-library: 10.4.2(supports-color@10.0.0)
       hnswlib-node: 3.0.0
       html-to-text: 9.0.5
       ignore: 5.3.2
@@ -13735,7 +13784,7 @@ snapshots:
       - encoding
       - supports-color
 
-  gcp-metadata@7.0.1(supports-color@10.0.0):
+  gcp-metadata@8.1.1(supports-color@10.0.0):
     dependencies:
       gaxios: 7.1.1(supports-color@10.0.0)
       google-logging-utils: 1.1.1
@@ -13878,12 +13927,12 @@ snapshots:
 
   globals@16.3.0: {}
 
-  google-auth-library@10.1.0(supports-color@10.0.0):
+  google-auth-library@10.4.2(supports-color@10.0.0):
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
       gaxios: 7.1.1(supports-color@10.0.0)
-      gcp-metadata: 7.0.1(supports-color@10.0.0)
+      gcp-metadata: 8.1.1(supports-color@10.0.0)
       google-logging-utils: 1.1.1
       gtoken: 8.0.0(supports-color@10.0.0)
       jws: 4.0.0
@@ -13941,7 +13990,7 @@ snapshots:
       '@grpc/proto-loader': 0.7.15
       abort-controller: 3.0.0
       duplexify: 4.1.3
-      google-auth-library: 10.1.0(supports-color@10.0.0)
+      google-auth-library: 10.4.2(supports-color@10.0.0)
       google-logging-utils: 1.1.1
       node-fetch: 3.3.2
       object-hash: 3.0.0
