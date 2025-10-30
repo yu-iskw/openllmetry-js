@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+import assert from "node:assert/strict";
+import {
+  afterEach,
+  before,
+  beforeEach,
+  describe,
+  it,
+} from "node:test";
 import { context } from "@opentelemetry/api";
 import { AsyncHooksContextManager } from "@opentelemetry/context-async-hooks";
 import {
@@ -21,7 +29,6 @@ import {
   InMemorySpanExporter,
   SimpleSpanProcessor,
 } from "@opentelemetry/sdk-trace-base";
-import * as assert from "assert";
 import type {
   GenerateContentParameters,
   GenerateContentResponse,
@@ -31,10 +38,8 @@ import { GoogleGenAIInstrumentation } from "../src/google-genai-instrumentation"
 const memoryExporter = new InMemorySpanExporter();
 
 describe("GoogleGenAIInstrumentation", () => {
-  const provider = new BasicTracerProvider();
-  const instrumentation = new GoogleGenAIInstrumentation({
-    traceContent: true,
-  });
+  let provider: BasicTracerProvider;
+  let instrumentation: GoogleGenAIInstrumentation;
   let contextManager: AsyncHooksContextManager;
 
   class FakeModels {
@@ -105,7 +110,12 @@ describe("GoogleGenAIInstrumentation", () => {
   } as unknown as typeof import("@google/genai");
 
   before(() => {
-    provider.addSpanProcessor(new SimpleSpanProcessor(memoryExporter));
+    provider = new BasicTracerProvider({
+      spanProcessors: [new SimpleSpanProcessor(memoryExporter)],
+    });
+    instrumentation = new GoogleGenAIInstrumentation({
+      traceContent: true,
+    });
     instrumentation.setTracerProvider(provider);
     instrumentation.manuallyInstrument(fakeModule);
   });

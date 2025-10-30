@@ -284,7 +284,10 @@ export class GoogleGenAIInstrumentation extends InstrumentationBase {
         });
       }
     } catch (error) {
-      this._diag.debug(error as Error);
+      this._diag.debug(
+        "Failed to collect Google GenAI request attributes",
+        error as Error,
+      );
       this._config.exceptionLogger?.(error as Error);
     }
 
@@ -341,7 +344,10 @@ export class GoogleGenAIInstrumentation extends InstrumentationBase {
         this.applyStreamingAttributes(span, aggregation);
         span.setStatus({ code: SpanStatusCode.OK });
       } catch (error) {
-        this._diag.debug(error as Error);
+        this._diag.debug(
+          "Failed to finalize Google GenAI streaming span",
+          error as Error,
+        );
         this._config.exceptionLogger?.(error as Error);
       } finally {
         span.end();
@@ -378,7 +384,10 @@ export class GoogleGenAIInstrumentation extends InstrumentationBase {
           });
         }
       } catch (error) {
-        this._diag.debug(error as Error);
+        this._diag.debug(
+          "Failed to aggregate Google GenAI streaming chunk",
+          error as Error,
+        );
         this._config.exceptionLogger?.(error as Error);
       }
     };
@@ -448,6 +457,9 @@ export class GoogleGenAIInstrumentation extends InstrumentationBase {
       [Symbol.asyncIterator]() {
         return this;
       },
+      async [Symbol.asyncDispose]() {
+        finalize();
+      },
     };
 
     return wrappedIterator;
@@ -476,7 +488,10 @@ export class GoogleGenAIInstrumentation extends InstrumentationBase {
         this.applyCompletions(span, completions);
       }
     } catch (error) {
-      this._diag.debug(error as Error);
+      this._diag.debug(
+        "Failed to collect Google GenAI response attributes",
+        error as Error,
+      );
       this._config.exceptionLogger?.(error as Error);
     }
   }

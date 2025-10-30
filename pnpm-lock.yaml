@@ -141,7 +141,7 @@ importers:
         version: 10.0.10
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-bedrock:
     dependencies:
@@ -190,7 +190,7 @@ importers:
         version: 10.0.10
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-chromadb:
     dependencies:
@@ -236,7 +236,7 @@ importers:
         version: 3.0.9
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-cohere:
     dependencies:
@@ -282,7 +282,7 @@ importers:
         version: 7.17.1(encoding@0.1.13)
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-google-genai:
     dependencies:
@@ -308,12 +308,9 @@ importers:
       '@opentelemetry/sdk-trace-base':
         specifier: ^2.0.1
         version: 2.0.1(@opentelemetry/api@1.9.0)
-      '@types/mocha':
-        specifier: ^10.0.10
-        version: 10.0.10
-      ts-mocha:
-        specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+      tsx:
+        specifier: ^4.19.2
+        version: 4.20.6
 
   packages/instrumentation-langchain:
     dependencies:
@@ -380,7 +377,7 @@ importers:
         version: 11.7.1
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-llamaindex:
     dependencies:
@@ -435,7 +432,7 @@ importers:
         version: 0.11.21(@llama-flow/core@0.4.4(p-retry@6.2.1)(rxjs@7.8.2)(zod@3.25.76))(p-retry@6.2.1)(rxjs@7.8.2)(tree-sitter@0.22.4)(web-tree-sitter@0.24.7)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@3.25.76)
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-openai:
     dependencies:
@@ -499,7 +496,7 @@ importers:
         version: 5.12.2(ws@8.18.3)(zod@3.25.76)
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-pinecone:
     dependencies:
@@ -548,7 +545,7 @@ importers:
         version: 10.0.10
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-qdrant:
     dependencies:
@@ -594,7 +591,7 @@ importers:
         version: 10.0.10
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
@@ -649,7 +646,7 @@ importers:
         version: 0.20.0(encoding@0.1.13)
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/instrumentation-vertexai:
     dependencies:
@@ -692,7 +689,7 @@ importers:
         version: 10.0.10
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
   packages/sample-app:
     dependencies:
@@ -966,7 +963,7 @@ importers:
         version: 0.20.0(encoding@0.1.13)
       ts-mocha:
         specifier: ^11.1.0
-        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
+        version: 11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0)
 
 packages:
 
@@ -5455,6 +5452,9 @@ packages:
     resolution: {integrity: sha512-A1B3Bh1UmL0bidM/YX2NsCOTnGJePL9rO/M+Mw3m9f2gUpfokS0hi5Eah0WSUEWZdZhIZtMjkIYS7mDfOqNHbg==}
     engines: {node: '>=10'}
 
+  get-tsconfig@4.13.0:
+    resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
+
   gifwrap@0.10.1:
     resolution: {integrity: sha512-2760b1vpJHNmLzZ/ubTtNnEx5WApN/PYWJvXvgS+tL1egTTthayFYIQQNi136FLEDcN/IyEY2EcGpIITD6eYUw==}
 
@@ -7334,6 +7334,9 @@ packages:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
 
+  resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   resolve.exports@2.0.3:
     resolution: {integrity: sha512-OcXjMsGdhL4XnbShKpAcSqPMzQoYkYyhbEaeSko47MjRP9NfEQMhZkXL1DoFlt9LWQn4YttrdnV6X2OiyzBi+A==}
     engines: {node: '>=10'}
@@ -7804,6 +7807,20 @@ packages:
       '@swc/wasm':
         optional: true
 
+  ts-node@10.9.2:
+    resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+
   tsconfig-paths@4.2.0:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
     engines: {node: '>=6'}
@@ -7813,6 +7830,11 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  tsx@4.20.6:
+    resolution: {integrity: sha512-ytQKuwgmrrkDTFP4LjR0ToE2nqgy886GpvRSpU0JAnrdBYppuY5rLkRUYPU1yCryb24SsKBTL/hlDQAEFVwtZg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   tuf-js@2.2.1:
     resolution: {integrity: sha512-GwIJau9XaA8nLVbUXsN3IlFi7WmQ48gBUrl3FTkkL/XLu/POhBzfmX9hd33FNMX1qAsfl6ozO1iMmW9NC8YniA==}
@@ -13825,6 +13847,10 @@ snapshots:
 
   get-stream@6.0.0: {}
 
+  get-tsconfig@4.13.0:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
+
   gifwrap@0.10.1:
     dependencies:
       image-q: 4.0.0
@@ -16095,6 +16121,8 @@ snapshots:
 
   resolve-from@5.0.0: {}
 
+  resolve-pkg-maps@1.0.0: {}
+
   resolve.exports@2.0.3: {}
 
   resolve@1.22.10:
@@ -16592,10 +16620,10 @@ snapshots:
 
   ts-error@1.0.6: {}
 
-  ts-mocha@11.1.0(mocha@11.7.1)(ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0):
+  ts-mocha@11.1.0(mocha@11.7.1)(ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3))(tsconfig-paths@4.2.0):
     dependencies:
       mocha: 11.7.1
-      ts-node: 10.9.1(@types/node@24.0.15)(typescript@5.8.3)
+      ts-node: 10.9.2(@types/node@24.0.15)(typescript@5.8.3)
     optionalDependencies:
       tsconfig-paths: 4.2.0
 
@@ -16617,7 +16645,7 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.1(@types/node@24.0.15)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@24.0.15)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
@@ -16644,6 +16672,13 @@ snapshots:
   tslib@1.14.1: {}
 
   tslib@2.8.1: {}
+
+  tsx@4.20.6:
+    dependencies:
+      esbuild: 0.25.8
+      get-tsconfig: 4.13.0
+    optionalDependencies:
+      fsevents: 2.3.3
 
   tuf-js@2.2.1:
     dependencies:
