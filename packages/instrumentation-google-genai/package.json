@@ -1,0 +1,54 @@
+{
+  "name": "@traceloop/instrumentation-google-genai",
+  "version": "0.1.0",
+  "description": "Google GenAI instrumentation for OpenTelemetry",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": "traceloop/openllmetry-js",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "tsx --test tests/google-genai.test.ts"
+  },
+  "keywords": [
+    "opentelemetry",
+    "nodejs",
+    "tracing",
+    "google",
+    "genai"
+  ],
+  "author": "Traceloop <dev@traceloop.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.mjs",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "doc",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@google/genai": "^1.28.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/instrumentation": "^0.203.0",
+    "@traceloop/ai-semantic-conventions": "workspace:*",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@opentelemetry/context-async-hooks": "^2.0.1",
+    "@opentelemetry/sdk-trace-base": "^2.0.1",
+    "tsx": "^4.19.2"
+  },
+  "homepage": "https://github.com/traceloop/openllmetry-js/tree/main/packages/instrumentation-google-genai",
+  "gitHead": "ef1e70d6037f7b5c061056ef2be16e3f55f02ed5"
+}
